@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("/weather-io/images/bg.png");
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input-bar {
+    margin-top: 150px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.input-bar #search {
+    width: 30%;
+
+}
+
