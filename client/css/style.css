@@ -5,6 +5,7 @@
 
 body {
     background-image: url("/weather-io/images/bg.png");
+    font-family: 'Lato', sans-serif;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -25,12 +26,39 @@ body {
     padding: 5px;
     border-width: 0 0 2px;
     border-color: #bfbebb;
+    color: #ffffff;
     transition: 0.4s;
 }
 
 .input-bar #search:focus {
     border-color: #d69e04;
 }
+
+.city-country {
+    margin-top: 70px;
+    margin-left: 20px;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.weather-info {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    width: 100vw;
+}
+
+.weather-info .info {
+    border: 2px solid #ffffff;
+    width: 10vw;
+    text-align: center;
+    height: auto;
+    display: none;
+}
+
 
 
 
