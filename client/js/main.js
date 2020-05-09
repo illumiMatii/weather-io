@@ -10,14 +10,18 @@ document.addEventListener("DOMContentLoaded", () => {
 const APIKEY = "e90cd750023e66c595c3b829c8fb731d";
 const input = document.querySelector("#search");
 const cityCountry = document.querySelector(".city-country");
-const weatherInfo = document.querySelector(".info");
+const info = document.querySelector(".info");
+const tags = document.querySelector(".tags");
 
 
-let tag = document.querySelector(".city-country > h1");
+let tag = document.createElement("h1");
 let obj;
+let icon = document.createElement("img");
 let temp = document.createElement("h2");
 let pressure = document.createElement("h2");
 let humidity = document.createElement("h2");
+
+cityCountry.appendChild(tag);
 
 
 function getValueOfInput() {
@@ -25,16 +29,17 @@ function getValueOfInput() {
 
     if(value) {
         cityCountry.style.display = "flex";
-        weatherInfo.style.display = "block";
-        weatherInfo.appendChild(temp);
-        weatherInfo.appendChild(pressure);
-        weatherInfo.appendChild(humidity);
+        info.style.display = "flex";
+        info.appendChild(icon);
+        tags.appendChild(temp);
+        tags.appendChild(pressure);
+        tags.appendChild(humidity);
         setWeather(value);
-
+        setIcon(value);
     } else {
         cityCountry.style.display = "flex";
-        weatherInfo.style.display = "none";
-        tag.textContent = "Sorry, something went wrong provide City name again";
+        info.style.display = "none";
+        tag.textContent = "Sorry, something went wrong. Please search for a valid city";
     }
 }
 
@@ -50,7 +55,17 @@ function getValueOfInput() {
             })
             .catch(() => {
                 cityCountry.style.display = "flex";
-                weatherInfo.style.display = "none";
-                tag.textContent = "Sorry, something went wrong provide City name again";
+                info.style.display = "none";
+                tag.textContent = "Sorry, something went wrong. Please search for a valid city";
+            });
+}
+
+async function setIcon(city) {
+    await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKEY}`)
+            .then(response => response.json())
+            .then(data => {obj = data})
+            .then(() => {
+                let iconUrl = `http://openweathermap.org/img/w/${obj.weather[0].icon}.png`;
+                icon.setAttribute("src", iconUrl);                
             });
 }
