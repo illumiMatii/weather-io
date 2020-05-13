@@ -16,7 +16,7 @@ const tags = document.querySelector(".tags");
 
 let tag = document.createElement("h1");
 let obj;
-let icon = document.createElement("img");
+let icon = document.createElement("i");
 let temp = document.createElement("h2");
 let pressure = document.createElement("h2");
 let humidity = document.createElement("h2");
@@ -29,11 +29,14 @@ function getValueOfInput() {
 
     if(value) {
         cityCountry.style.display = "flex";
+        
         info.style.display = "flex";
         info.appendChild(icon);
+        
         tags.appendChild(temp);
         tags.appendChild(pressure);
         tags.appendChild(humidity);
+        
         setWeather(value);
         setIcon(value);
     } else {
@@ -50,8 +53,8 @@ function getValueOfInput() {
             .then(() => {
                 tag.textContent = `${city}, ${obj.sys.country}`;
                 temp.textContent = `Temperature: ${Math.round(obj.main.temp)}°C`;
-                pressure.textContent = `Pressure: ${obj.main.pressure} hPa`;
-                humidity.textContent = `Humidity: ${obj.main.humidity}`;
+                pressure.textContent = `Pressure: ${obj.main.pressure}hPa`;
+                humidity.textContent = `Humidity: ${obj.main.humidity}%`;
             })
             .catch(() => {
                 cityCountry.style.display = "flex";
@@ -65,7 +68,6 @@ async function setIcon(city) {
             .then(response => response.json())
             .then(data => {obj = data})
             .then(() => {
-                let iconUrl = `http://openweathermap.org/img/w/${obj.weather[0].icon}.png`;
-                icon.setAttribute("src", iconUrl);                
+                icon.setAttribute("class", `wi wi-owm-${obj.weather[0].id}`)            
             });
 }

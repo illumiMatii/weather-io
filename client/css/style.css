@@ -68,9 +68,10 @@ body {
     margin: 15px;
 }
 
-.info img {
+.info i {
     text-align: center;
     margin: 50px;
+    font-size: 3em;
 }
 
 
