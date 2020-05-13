@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const APIKEY = "e90cd750023e66c595c3b829c8fb731d";
+const APIKEY = "your api key";
 const input = document.querySelector("#search");
 const cityCountry = document.querySelector(".city-country");
 const info = document.querySelector(".info");
