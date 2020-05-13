@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("keypress", (e) => {
         if(e.key === "Enter"){
-            getValueOfInput();
+            main();
             input.value = "";
         }
     });
@@ -24,7 +24,7 @@ let humidity = document.createElement("h2");
 cityCountry.appendChild(tag);
 
 
-function getValueOfInput() {
+function main() {
     let value = input.value.trim();
 
     if(value) {
