@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("/weather-io/images/bg.png");
+    font-family: 'Kanit', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input-bar {
+    margin-top: 150px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.input-bar #search {
+    width: 30%;
+    font-size: 18px;
+    background: none;
+    outline: 0;
+    padding: 5px;
+    border-width: 0 0 2px;
+    border-color: #bfbebb;
+    color: #ffffff;
+    transition: 0.4s;
+}
+
+.input-bar #search:focus {
+    border-color: #d69e04;
+}
+
+.city-country {
+    margin-top: 70px;
+    margin-left: 20px;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.weather-info {
+    margin-top: 60px;
+    display: flex;
+    justify-content: flex-end;
+    color: #ffffff;
+    width: 100vw;
+}
+
+.weather-info .info {
+    margin-right: 150px;
+    padding-right: 50px;
+    border-radius: 4px;
+    width: auto;
+    text-align: center;
+    height: auto;
+    display: none;
+    flex-direction: row-reverse;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.info h2 {
+    text-align: center;
+    margin: 15px;
+}
+
+.info i {
+    text-align: center;
+    margin: 50px;
+    font-size: 3em;
+}
+
+
+
+
+::placeholder {
+    color: #bfbebb;
+}
+
+:-ms-input-placeholder {
+    color: #bfbebb;
+}
+
+::-ms-input-placeholder {
+    color: #bfbebb;
+}
