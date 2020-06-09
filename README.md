@@ -10,4 +10,4 @@ To get information about forecast I used [OpenWeatherMap]([https://openweatherma
 
 ## :sun_with_face: Icons
 I decided to change the main API icons, beacuse they didn't fit into design of webpage. The choice fell on [weather-icons]([https://github.com/erikflowers/weather-icons](https://github.com/erikflowers/weather-icons)).
-The icon designs are originally by  [Lukas Bischoff](http://www.twitter.com/artill). Icon art for v1.1 forward, HTML, Less, and CSS are by  [Erik Flowers](http://www.helloerik.com/).
+The icon designs are originally by [Lukas Bischoff](http://www.twitter.com/artill). Icon art for v1.1 forward, HTML, Less, and CSS are by  [Erik Flowers](http://www.helloerik.com/).
