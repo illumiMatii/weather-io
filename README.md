@@ -2,7 +2,7 @@
 Weather website project where user can get information about forecast in given city/town/village etc.
 
 ## :partly_sunny: About
-This is my first project where I used **async** functions in JavaScript and that was it main purpose, improve my programming skills. 
+This is my first project where I used **async** functions in JavaScript and the main purpose to do that project was improve my programming skills. 
 
 ## :green_book: API
 To get information about forecast I used [OpenWeatherMap](https://openweathermap.org) API.
